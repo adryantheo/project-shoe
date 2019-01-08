@@ -1,0 +1,29 @@
+//fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons");
+
+//vuetify
+@import '~vuetify/dist/vuetify.min.css';
+
+body * {
+  // both are the same, but use both for cross-browser compatibility
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  // set hyphens on breaked text
+  hyphens: manual;
+  -moz-hyphens: manual;
+  -ms-hyphens: manual;
+  -webkit-hyphens: manual;
+}
+
+a {
+  text-decoration: none;
+}
+
+.rounded-card {
+  border-radius: 8px;
+}
+
+.overflow-text {
+  max-width: 100%
+}
