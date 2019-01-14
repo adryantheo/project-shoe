@@ -18,10 +18,24 @@ window.axios = require('axios')
 Vue.prototype.$cart = []
 
 import ShoeApp from './ShoeApp'
-const app = new Vue({
-  el: '#app',
-  router,
-  components: {
-    ShoeApp
-  }
-});
+if(document.getElementById("app")) {
+  const app = new Vue({
+    el: '#app',
+    router,
+    components: {
+      ShoeApp
+    }
+  });
+}
+
+import ShoeAppAdmin from './ShoeAppAdmin'
+if(document.getElementById("appAdmin")) {
+  const appAdmin = new Vue({
+    el: '#appAdmin',
+    router,
+    components: {
+      ShoeAppAdmin
+    }
+  });
+}
+

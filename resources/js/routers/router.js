@@ -12,6 +12,11 @@ import AppCheckout from '../components/Pengunjung/Shopping/AppCheckout'
 
 import AppReview from '../components/Pengunjung/Review/AppReview'
 
+
+//admin
+import AppLogin from '../components/Admin/AppLogin'
+import Dashboard from '../components/Admin/Dashboard/Dashboard'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -24,7 +29,10 @@ const routes = [
 
   { path:'/cart', component: AppCart, name:'cart' },
   { path:'/checkout', component: AppCheckout, name:'checkout' },
-  
+
+  // admin page
+  { path:'/admin', component: AppLogin, name:'admin' },
+  { path:'/admin/dashboard', component: Dashboard, name:'dashboard' },
 
 ]
 

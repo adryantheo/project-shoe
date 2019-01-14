@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import AppNavigation from './components/Navigation/AppNavigation'
+import AppNavigation from './components/Pengunjung/Navigation/AppNavigation'
 
 export default {
   components: {

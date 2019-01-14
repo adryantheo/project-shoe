@@ -15,7 +15,7 @@
               <div class="display-1 font-weight-light">
                 Sepatu<span class="font-weight-medium accent--text">Ku</span>
               </div>
-              <p class="title font-weight-light" v-if="isLoginForm">Tendang aja Bos!</p>
+              <p class="title font-weight-light">Tendang aja Bos!</p>
             </v-flex>
           </v-layout>
         </v-flex>

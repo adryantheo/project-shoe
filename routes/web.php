@@ -17,3 +17,7 @@ Route::get('/item/{any}', function () { return view('app'); });
 Route::get('/item/{any}/review', function () { return view('app'); });
 Route::get('/cart', function () { return view('app'); });
 Route::get('/checkout', function () { return view('app'); });
+
+// admin
+Route::get('/admin', function () { return view('appAdmin'); });
+Route::get('/admin/dashboard', function () { return view('appAdmin'); });
