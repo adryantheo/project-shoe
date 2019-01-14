@@ -15,6 +15,8 @@ Vue.use(Vuetify, {
 window.EventBus = new Vue()
 window.axios = require('axios')
 
+Vue.prototype.$cart = []
+
 import ShoeApp from './ShoeApp'
 const app = new Vue({
   el: '#app',

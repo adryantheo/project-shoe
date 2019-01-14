@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('app');
-});
+Route::get('/', function () { return view('app'); });
+Route::get('/welcome', function () { return view('app'); });
+Route::get('/item/{any}', function () { return view('app'); });
+Route::get('/item/{any}/review', function () { return view('app'); });
+Route::get('/cart', function () { return view('app'); });
+Route::get('/checkout', function () { return view('app'); });
