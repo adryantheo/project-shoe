@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import AppHome from '../components/Home/AppHome'
+import AppHome from '../components/Pengunjung/Home/AppHome'
 
-import AppWelcome from '../components/Welcome/AppWelcome'
+import AppWelcome from '../components/Pengunjung/Welcome/AppWelcome'
 
-import AppItemDetail from '../components/Items/AppItemDetail'
+import AppItemDetail from '../components/Pengunjung/Items/AppItemDetail'
 
-import AppCart from '../components/Shopping/AppCart'
-import AppCheckout from '../components/Shopping/AppCheckout'
+import AppCart from '../components/Pengunjung/Shopping/AppCart'
+import AppCheckout from '../components/Pengunjung/Shopping/AppCheckout'
 
-import AppReview from '../components/Review/AppReview'
+import AppReview from '../components/Pengunjung/Review/AppReview'
 
 Vue.use(VueRouter)
 
