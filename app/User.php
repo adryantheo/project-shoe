@@ -11,24 +11,17 @@ class User extends Authenticatable
 {
     use Notifiable, SoftDeletes, HasApiTokens;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+   //Fungsi untuk membuat kolom yang wajib di-isi dari database user
     protected $fillable = [
         'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+   //Fungsi untuk menyamarkan isi kolom
     protected $hidden = [
         'password', 'remember_token',
     ];
 
+    //Fungsi untuk menghitung banyak orderan user
     public function orders()
         {
             return $this->hasMany(Order::class);

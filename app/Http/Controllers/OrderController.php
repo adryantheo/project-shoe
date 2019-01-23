@@ -6,15 +6,21 @@ use App\Order;
 use Auth;
 use Illuminate\Http\Request;
 
+// Controller untuk Order
+
 class OrderController extends Controller
 {
-    public function index()
+    //Fungsi Index/ Menampilkan Semua Data
+    public function index() 
     {
+        //syntax untuk menarik semua data dari database order
         return response()->json(Order::with(['product'])->get(),200);
     }
 
+    //Fungsi untuk Mengirim Order dan Mengubah Status Orderan
     public function deliverOrder(Order $order)
     {
+        //syntax untuk mengirim orderan/ items
         $order->is_delivered = true;
         $status = $order->save();
 
@@ -25,8 +31,10 @@ class OrderController extends Controller
         ]);
     }
 
+    //Fungsi untuk Menambahkan Orderan
     public function store(Request $request)
     {
+        //Fungsi untuk menambah/ Create sebuah orderan
         $order = Order::create([
             'product_id' => $request->product_id,
             'user_id' => Auth::id(),
@@ -41,11 +49,13 @@ class OrderController extends Controller
         ]);
     }
 
+    //Fungsi untuk menampilkan data yang dipilih
     public function show(Order $order)
     {
         return response()->json($order,200);
     }
 
+    //Fungsi untuk melakukan Edit/ Update
     public function update(Request $request, Order $order)
     {
         $status = $order->update(
@@ -58,6 +68,7 @@ class OrderController extends Controller
         ]);
     }
 
+    //Fungsi Untuk Menghapus Item
     public function destroy(Order $order)
     {
         $status = $order->delete();

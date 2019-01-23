@@ -7,13 +7,17 @@ use App\User;
 use Validator;
 use Illuminate\Http\Request;
 
+//Controller untuk User
+
 class UserController extends Controller
 {
+    //Fungsi untuk Menampilkan Semua Data User
     public function index()
     {
         return response()->json(User::with(['orders'])->get());
     }
 
+    //Fungsi untuk Login
     public function login(Request $request)
     {
         $status = 401;
@@ -30,6 +34,7 @@ class UserController extends Controller
         return response()->json($response, $status);
     }
 
+    //Fungsi untuk Register
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -57,11 +62,13 @@ class UserController extends Controller
         ]);
     }
 
+    //Fungsi untuk Menampilkan Data User Tertentu
     public function show(User $user)
     {
         return response()->json($user);
     }
 
+    //Fungsi untuk Menampilkan Orderan dari User Tertentu
     public function showOrders(User $user)
     {
         return response()->json($user->orders()->with(['product'])->get());
