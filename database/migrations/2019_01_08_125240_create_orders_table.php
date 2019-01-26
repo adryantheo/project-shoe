@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateOrdersTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         //Fungsi untuk membuat database secara otomatis
@@ -26,11 +22,7 @@ class CreateOrdersTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+  
     public function down()
     {
         Schema::dropIfExists('orders');
