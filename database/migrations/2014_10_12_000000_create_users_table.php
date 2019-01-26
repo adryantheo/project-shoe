@@ -9,7 +9,7 @@ class CreateUsersTable extends Migration
     
     public function up()
     {
-        //Fungsi untuk membuat database secara otomatis
+        //Fungsi untuk membuat database User secara otomatis
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');

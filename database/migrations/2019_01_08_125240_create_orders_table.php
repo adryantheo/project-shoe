@@ -9,7 +9,7 @@ class CreateOrdersTable extends Migration
     
     public function up()
     {
-        //Fungsi untuk membuat database secara otomatis
+        //Fungsi untuk membuat database Order secara otomatis
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('product_id');
